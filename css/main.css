@@ -333,6 +333,10 @@ body {
   color: white;
   z-index: 10; }
 
+@media screen and (max-width: 640px) {
+  .site-header {
+    min-height: 48px; } }
+
 .navigation__list {
   list-style: none;
   padding: 0;
@@ -345,10 +349,24 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media screen and (max-width: 640px) {
+    .navigation__list {
+      display: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .navigation__list--visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .navigation__item {
   display: block;
   margin: 0 16px; }
+  @media screen and (max-width: 640px) {
+    .navigation__item {
+      margin: 16px; } }
 
 .navigation__link {
   color: #1a936f; }
